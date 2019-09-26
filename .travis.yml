@@ -22,7 +22,7 @@ after_success:
   - docker push agkhalil/multi-worker
 
 deploy:
-  provider: elaticbeanstalk
+  provider: elasticbeanstalk
   region: eu-west-2
   app: multi-docker
   env: MultiDocker-env
