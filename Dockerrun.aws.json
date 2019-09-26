@@ -5,23 +5,32 @@
 			"name": "client",
 			"image": "agkhalil/multi-client",
 			"hostname": "client",
-			"essential": false
+			"essential": false,
 		},
 		{
 			"name": "server",
 			"image": "agkhalil/multi-server",
 			"hostname": "api",
-			"essential": false
+			"essential": false,
 		},
 		{
 			"name": "worker",
 			"image": "agkhalil/multi-worker",
 			"hostname": "worker",
-			"essential": false
+			"essential": false,
 		},
 		{
 			"name": "nginx",
-			"image": "agkhalil/multi-nginx"
+			"image": "agkhalil/multi-nginx",
+			"hostname": "nginx",
+			"essential": true,
+			"portMappings": [
+				{
+					"hostPort": 80,
+					"containerPort": 80
+				}
+			],
+			"links": ["client", "server"]
 		}
 	]
 }
