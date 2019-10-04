@@ -22,8 +22,8 @@ before_install:
 script:
   - docker run -e CI=true agkhalil/docker-react npm run test
 
-deployment:
-  provide: script
+deploy:
+  provider: script
   script: bash ./deploy.sh
   on:
     branch: master
