@@ -6,9 +6,9 @@ docker push agkhalil/multi-client:latest
 docker push agkhalil/multi-server:latest
 docker push agkhalil/multi-worker:latest
 
-docker push agkhalil/multi-client:SHA
-docker push agkhalil/multi-server:SHA
-docker push agkhalil/multi-worker:SHA
+docker push agkhalil/multi-client:$SHA
+docker push agkhalil/multi-server:$SHA
+docker push agkhalil/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=agkhalil/multi-server:$SHA
