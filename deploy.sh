@@ -5,4 +5,5 @@ docker push agkhalil/multi-client
 docker push agkhalil/multi-server
 docker push agkhalil/multi-worker
 kubectl apply -f k8s
-kubectl rollout restart deployments
+# kubectl rollout restart deployments
+kubectl version
